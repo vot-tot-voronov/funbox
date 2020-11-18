@@ -1,1 +1,39 @@
-
+@font-face {
+    font-family: 'Exo';
+    src: local('Exo2.0-Thin'),
+         url('./fonts/Exo2.0-Thin.woff2') format('woff2'), 
+         url('./fonts/Exo2.0-Thin.woff') format('woff'),
+         url('./fonts/Exo2.0-Thin.ttf') format('ttf'),
+         url('./fonts/Exo2.0-Thin.otf') format('otf'),
+         url('./fonts/Exo2.0-Thin.eot') format('eot');
+  }
+body {
+	font-family: 'Exo', 'Arial', sans-serif;
+	padding: 0;
+	margin: 0;
+	font-size: 14px;
+}
+div, p, form, input, a, span, button {
+	box-sizing: border-box;
+}
+p {
+	margin: 0;
+}
+ul, li {
+	display: block;
+	padding: 0;
+	margin: 0;
+}
+a, a:hover, a:active, a:focus {
+	text-decoration: none;
+}
+a, button, input {
+	padding: 0;
+}
+input, input:hover, input:focus, input:active,
+button, button:hover, button:focus, button:active {
+	outline: none;
+}
+h1, h2, h3, h4, h5, h6 {
+	margin: 0;
+}
