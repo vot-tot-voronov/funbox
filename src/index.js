@@ -1,17 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+
+import CardsServices from './services';
+import {CardsItemsProvider} from './components/card-service-context';
+
 import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import App from './components/app';
+
+const cardsServices = new CardsServices();
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <CardsItemsProvider value={cardsServices}>
+      <App />
+    </CardsItemsProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
