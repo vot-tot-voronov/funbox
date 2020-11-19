@@ -4,7 +4,10 @@ import './block-cards.css'
 
 const BlockCards = () => {
     return (
-        <CardItem />
+        <div className="container">
+            <CardItem />
+        </div>
+        
     );
 }
 

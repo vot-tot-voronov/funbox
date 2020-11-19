@@ -5,6 +5,7 @@ import cat from '../../images/funbox_logo.png';
 const CardItem = () => {
     return (
         <div className="card">
+            <div className="card__cut-corner"></div>
             <div className="content">
                 <div className="content__text">
                     <p className="signature">Сказочное заморское яство</p>
@@ -14,16 +15,13 @@ const CardItem = () => {
                     <p className="present">мышь в подарок</p>
                 </div>
                 <img src={cat} alt="Funbox Cat" className="content__logo"/>
-                <div className="content__circle">
-                    <p className="circle__weight">0,5</p>
-                    <p className="circle__kg">кг</p>
+                <div className='content__circle'>
+                    <p className='kilo'>0,5<br/><span>кг</span></p>
                 </div>
             </div>
-            <div className="content__descr">
-                <p className="descr__text">
-                    Чего сидишь? Порадуй котэ, <button className="descr__text_btn">купи</button>.
-                </p>
-            </div>
+            {/* <p className="descr__text">
+                Чего сидишь? Порадуй котэ, <span className="descr__text_btn">купи</span>.
+            </p> */}
         </div>
     );
 
