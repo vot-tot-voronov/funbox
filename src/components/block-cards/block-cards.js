@@ -1,14 +1,18 @@
 import React from 'react'
+
+import withCards from '../hoc';
 import CardItem from '../card-item';
 import './block-cards.css'
 
-const BlockCards = () => {
+const BlockCards = ({CardsServices}) => {
+    const data = CardsServices.getCards();
+    const allCards = data.map((card) => <CardItem key={card.id} card={card}/>);
     return (
         <div className="container">
-            <CardItem />
+            {allCards}
         </div>
         
     );
 }
 
-export default BlockCards;
+export default withCards()(BlockCards);

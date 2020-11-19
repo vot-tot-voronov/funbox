@@ -1,5 +1,5 @@
 import React from 'react';
-import CardsItemsConsumer from '../card-service-context';
+import {CardsItemsConsumer} from '../card-service-context';
 
 const withCards = () => (Wrapped) => {
     return (props) => {

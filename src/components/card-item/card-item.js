@@ -2,21 +2,23 @@ import React from 'react'
 import './card-item.css';
 import cat from '../../images/funbox_logo.png';
 
-const CardItem = () => {
+const CardItem = ({card}) => {
+    const {withWhat, partials, presents, weight} = card;
     return (
         <div className="card">
-            <div className="card__cut-corner"></div>
-            <div className="content">
-                <div className="content__text">
-                    <p className="signature">Сказочное заморское яство</p>
-                    <h2 className="title">Нямушка</h2>
-                    <h3 className="name">с фуа-гра</h3>
-                    <p className="portion">10 порций</p>
-                    <p className="present">мышь в подарок</p>
-                </div>
-                <img src={cat} alt="Funbox Cat" className="content__logo"/>
-                <div className='content__circle'>
-                    <p className='kilo'>0,5<br/><span>кг</span></p>
+            <div className="wrapper">
+                <div className="content">
+                    <div className="content__text">
+                        <p className="signature">Сказочное заморское яство</p>
+                        <h2 className="title">Нямушка</h2>
+                        <h3 className="name">{withWhat}</h3>
+                        <p className="portion">{partials}</p>
+                        <p className="present">{presents}</p>
+                    </div>
+                    <img src={cat} alt="Funbox Cat" className="content__logo"/>
+                    <div className='content__circle'>
+                        <p className='kilo'>{weight}<br/><span>кг</span></p>
+                    </div>
                 </div>
             </div>
             <p className="descr__text">
