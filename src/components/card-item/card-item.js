@@ -19,9 +19,9 @@ const CardItem = () => {
                     <p className='kilo'>0,5<br/><span>кг</span></p>
                 </div>
             </div>
-            {/* <p className="descr__text">
+            <p className="descr__text">
                 Чего сидишь? Порадуй котэ, <span className="descr__text_btn">купи</span>.
-            </p> */}
+            </p>
         </div>
     );
 
