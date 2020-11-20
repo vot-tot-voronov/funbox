@@ -1,4 +1,4 @@
-import React, {useState } from 'react'
+import React, { useState, useEffect, useMemo } from 'react'
 import './card-item.css';
 import cat from '../../images/funbox_logo.png';
 
@@ -14,11 +14,14 @@ const CardItem = ({card}) => {
             {description}
         </p>
     );
+
+    const [selected, setSelected] = useState(false);
+    const [descrParagr, setdescrParagr] = useState(paragraph);
     
     return (
         <div className="card">
             <div className="wrapper">
-                <div onClick={()=> console.log('clicked')} onMouseLeave={()=> console.log('out')} className="content">
+                <div onClick={()=> setSelected(!selected)} onMouseLeave={()=> setdescrParagr(paragraphSelected)} className="content">
                     <div className="content__text">
                         <p className="signature">Сказочное заморское яство</p>
                         <h2 className="title">Нямушка</h2>
@@ -32,7 +35,7 @@ const CardItem = ({card}) => {
                     </div>
                 </div>
             </div>
-            {paragraphSelected}
+            {descrParagr}
             {/* <p className="descr__text">
                 Чего сидишь? Порадуй котэ, <span className="descr__text_btn">купи</span>.
             </p> */}
