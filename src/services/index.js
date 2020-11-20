@@ -6,7 +6,8 @@ export default class CardsServices {
             partials: '10 порций',
             presents: 'мышь в подарок',
             weight: '0,5',
-            description: 'Печень утки разварная с артишоками.'
+            description: 'Печень утки разварная с артишоками.',
+            availability: true
             
         },
         {
@@ -15,7 +16,8 @@ export default class CardsServices {
             partials: '40 порций',
             presents: '2 мыши в подарок',
             weight: '2',
-            description: 'Головы щучьи с чесноком да свежайшая сёмгушка.'
+            description: 'Головы щучьи с чесноком да свежайшая сёмгушка.',
+            availability: true
         },
         {
             id: '3',
@@ -23,7 +25,8 @@ export default class CardsServices {
             partials: '100 порций',
             presents: '5 мышей в подарок',
             weight: '5',
-            description: 'Филе из цыплят с трюфелями в бульоне.'
+            description: 'Филе из цыплят с трюфелями в бульоне.',
+            availability: false
         }
     ];
     getCards() {

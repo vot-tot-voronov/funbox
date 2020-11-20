@@ -1,13 +1,24 @@
-import React from 'react'
+import React, {useState } from 'react'
 import './card-item.css';
 import cat from '../../images/funbox_logo.png';
 
 const CardItem = ({card}) => {
-    const {withWhat, partials, presents, weight} = card;
+    const {withWhat, partials, presents, weight, description, availability} = card;
+    const paragraph = (
+        <p className="descr__text">
+            Чего сидишь? Порадуй котэ, <span className="descr__text_btn">купи</span>.
+        </p>
+    );
+    const paragraphSelected = (
+        <p className="descr__text">
+            {description}
+        </p>
+    );
+    
     return (
         <div className="card">
             <div className="wrapper">
-                <div className="content">
+                <div onClick={()=> console.log('clicked')} onMouseLeave={()=> console.log('out')} className="content">
                     <div className="content__text">
                         <p className="signature">Сказочное заморское яство</p>
                         <h2 className="title">Нямушка</h2>
@@ -21,9 +32,10 @@ const CardItem = ({card}) => {
                     </div>
                 </div>
             </div>
-            <p className="descr__text">
+            {paragraphSelected}
+            {/* <p className="descr__text">
                 Чего сидишь? Порадуй котэ, <span className="descr__text_btn">купи</span>.
-            </p>
+            </p> */}
         </div>
     );
 

@@ -22,6 +22,7 @@
     height: 476px;
     width: 100%;
     position: relative;
+    z-index: 3;
     overflow: hidden;
     margin-left: auto;
     margin-right: auto;
@@ -67,7 +68,6 @@
     position: absolute;
     right: 15px;
     bottom: 15px;
-    z-index: 1;
     background: #1698d9;
     transition: all .3s ease;
 }
@@ -91,5 +91,11 @@
 .descr__text_btn {
     color: #1698d9;
     border-bottom: 1px #1698d9 dashed;
+    cursor: pointer;
+    transition: all .2s ease;
+}
+.descr__text_btn:hover {
+    color: bisque;
+    border-bottom-color: bisque;
 }
 
