@@ -17,11 +17,19 @@ const CardItem = ({card}) => {
 
     const [selected, setSelected] = useState(false);
     const [descrParagr, setdescrParagr] = useState(paragraph);
+
+    const changeParagr = () => {
+        if (selected) {
+            setdescrParagr(paragraphSelected);
+        } else {
+            setdescrParagr(paragraph);
+        }
+    }
     
     return (
         <div className="card">
             <div className="wrapper">
-                <div onClick={()=> setSelected(!selected)} onMouseLeave={()=> setdescrParagr(paragraphSelected)} className="content">
+                <div onClick={()=> setSelected(!selected)} onMouseLeave={changeParagr} className="content">
                     <div className="content__text">
                         <p className="signature">Сказочное заморское яство</p>
                         <h2 className="title">Нямушка</h2>
