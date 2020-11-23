@@ -4,18 +4,25 @@
     width: 100%;
     margin-top: 23px;
     position: relative;
-    
 }
 .wrapper {
     height: 480px;
-    background: url('../../images/border.svg');
     transition: all .3s ease;
 }
-.wrapper:hover {
+.wrapper_hov {
+    background: url('../../images/border.svg');
+}
+.wrapper_hov:hover {
     background: url('../../images/borderhover.svg');
 }
-.wrapper:hover .content__circle {
-    background: #2ea8e6;
+.wrapper_sel {
+    background: url('../../images/border-sel.svg');
+}
+.wrapper_sel:hover {
+    background: url('../../images/border-sel-hov.svg');
+}
+.wrapper_sel_avl {
+    background: url('../../images/border-dis.svg');
 }
 .content {
     max-width: 312px;
@@ -33,11 +40,15 @@
     margin-left: 44px;
     font-size: 14px;
     color: #666666;
-
 }
 .signature {
     font-size: 16px;
     margin-bottom: 6px;
+    
+}
+.signature_sel_hov {
+    color: #e62e7a;
+    transition: all .3s ease;
 }
 .title {
     font-size: 48px;
@@ -49,6 +60,9 @@
     font-weight: bold;
     color: #000;
 }
+.content_text_dis {
+    color: #d4d4d4;
+}
 .portion {
     margin-top: 7px;
 }
@@ -57,6 +71,9 @@
     top: 214px;
     left: -36px;
     width: 400px;
+}
+.logo_opacity {
+    opacity: 0.5;
 }
 .content__circle {
     width: 81px;
@@ -68,8 +85,22 @@
     position: absolute;
     right: 15px;
     bottom: 15px;
-    background: #1698d9;
     transition: all .3s ease;
+}
+.content__circle_hov {
+    background: #1698d9;
+}
+.content:hover .content__circle_hov {
+    background: #2ea8e6;
+}
+.content__circle_sel {
+    background: #d91667;
+}
+.content:hover .content__circle_sel {
+    background: #e62e7a;
+}
+.content__circle_sel_avl {
+    background: #b3b3b3;
 }
 .kilo {
     text-align: center;
@@ -89,13 +120,16 @@
     text-align: center;
 }
 .descr__text_btn {
-    color: #1698d9;
-    border-bottom: 1px #1698d9 dashed;
+    color: #107cb2;
+    border-bottom: 1px #107cb2 dashed;
     cursor: pointer;
     transition: all .2s ease;
 }
-.descr__text_btn:hover {
-    color: bisque;
-    border-bottom-color: bisque;
+.card:hover .descr__text_btn {
+    color: #2489bc;
+    border-bottom: 1px #2489bc dashed;
+}
+.descr__text_avl {
+    color: #ffff66;
 }
 
