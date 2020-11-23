@@ -19,10 +19,7 @@
 .wrapper_sel {
     background: url('../../images/border-sel.svg');
 }
-.wrapper_sel_hov: {
-    background: url('../../images/border-sel.svg');
-}
-.wrapper_sel_hov:hover {
+.wrapper_sel:hover {
     background: url('../../images/border-sel-hov.svg');
 }
 .wrapper_sel_avl {
