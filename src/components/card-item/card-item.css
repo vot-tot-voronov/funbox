@@ -8,6 +8,7 @@
 .wrapper {
     height: 480px;
     transition: all .3s ease;
+    cursor: pointer;
 }
 .wrapper_hov {
     background: url('../../images/border.svg');
@@ -18,7 +19,10 @@
 .wrapper_sel {
     background: url('../../images/border-sel.svg');
 }
-.wrapper_sel:hover {
+.wrapper_sel_hov: {
+    background: url('../../images/border-sel.svg');
+}
+.wrapper_sel_hov:hover {
     background: url('../../images/border-sel-hov.svg');
 }
 .wrapper_sel_avl {
@@ -44,7 +48,6 @@
 .signature {
     font-size: 16px;
     margin-bottom: 6px;
-    
 }
 .signature_sel_hov {
     color: #e62e7a;
@@ -132,4 +135,3 @@
 .descr__text_avl {
     color: #ffff66;
 }
-
