@@ -14,4 +14,4 @@
 ## Запуск приложения
 1. Скачайте файлы из репозитория;
 2. npm install
-3. npm start
+3. npm start or yarn start
