@@ -1,6 +1,7 @@
 # Тестовое задание FunBox `(HTML/CSS/JS)`
 
 ***Ссылка на ТЗ:*** *https://funbox.ru/vacancies/html-css-js-developer*
+
 ***Важно!***  *Задание выполненно частично, блок с отвтетами на вопросы пропущен.* ***Важно!***
 
 ## Task Requirements
