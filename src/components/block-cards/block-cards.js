@@ -1,5 +1,4 @@
 import React from 'react'
-
 import withCards from '../hoc';
 import CardItem from '../card-item';
 import './block-cards.css'

@@ -6,16 +6,21 @@ const CardItem = ({card}) => {
     const {withWhat, partials, presents, weight, description, availability} = card;
     
     const buy = () => {
-        setSelected(!selected)
         if (!availability) {
-            setDescrParagr(paragraphAvl)
+            setDescrParagr(paragraphAvl);
+            setWarp_sel('wrapper_sel_avl');
+            setContent_cercl_sel('content__circle_sel_avl');
+            setContentTextDis('content_text_dis');
+            setLogoOpacity('logo_opacity');
         } else {
             setDescrParagr(paragraphSelected);
+            setWarp_sel('wrapper_sel_hov');
+            setContent_cercl_sel('content__circle_sel_hov');
         }
-        setWarp_sel('wrapper_sel');
-        setContent_cercl_sel('content__circle_sel');
+        setSelected((selected) => !selected);
         setSelhov(true);
     }
+
     const paragraph = (
         <p className="descr__text">
             Чего сидишь? Порадуй котэ, <span 
@@ -23,6 +28,7 @@ const CardItem = ({card}) => {
                                             className="descr__text_btn">купи</span>.
         </p>
     );
+    
     const paragraphSelected = (
         <p className="descr__text">
             {description}
@@ -46,21 +52,20 @@ const CardItem = ({card}) => {
     const [contentTextDis, setContentTextDis] = useState('');
     const [logoOpacity, setLogoOpacity] = useState('');
 
-    const changeParagr = () => {
-        if (selected) {
+    const selectCard = () => {
+        setSelected((selected) => !selected);
+        if (!selected) {
             if (!availability) {
                 setDescrParagr(paragraphAvl);
                 setWarp_sel('wrapper_sel_avl');
                 setContent_cercl_sel('content__circle_sel_avl');
                 setContentTextDis('content_text_dis');
                 setLogoOpacity('logo_opacity');
-            } else {
+            } else if (!selhov) {
                 setDescrParagr(paragraphSelected);
                 setWarp_sel('wrapper_sel');
                 setContent_cercl_sel('content__circle_sel');
-                setSelhov(true);
             }
-            
         } else {
             setDescrParagr(paragraph);
             setWarp_sel('wrapper_hov');
@@ -68,6 +73,17 @@ const CardItem = ({card}) => {
             setSelhov(false);
             setContentTextDis('');
             setLogoOpacity('');
+            setSignature('Сказочное заморское яство');
+            setSignColor('');
+        }
+    };
+    const changeStylesLeave = () => {
+        if (selected) {
+            if (availability) {
+                setWarp_sel('wrapper_sel_hov');
+                setContent_cercl_sel('content__circle_sel_hov');
+                setSelhov(true);
+            }
         }
         setSignature('Сказочное заморское яство');
         setSignColor('');
@@ -85,8 +101,8 @@ const CardItem = ({card}) => {
         <div className="card">
             <div className={`wrapper ${warp_sel}`}>
                 <div 
-                    onClick={()=> setSelected(!selected)} 
-                    onMouseLeave={changeParagr} 
+                    onClick={selectCard} 
+                    onMouseLeave={changeStylesLeave} 
                     onMouseMove={changeSignature}
                     className="content">
                     <div className={`content__text ${contentTextDis}`}>

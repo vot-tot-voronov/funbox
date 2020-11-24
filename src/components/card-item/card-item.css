@@ -19,7 +19,10 @@
 .wrapper_sel {
     background: url('../../images/border-sel.svg');
 }
-.wrapper_sel:hover {
+.wrapper_sel_hov {
+    background: url('../../images/border-sel.svg');
+}
+.wrapper_sel_hov:hover {
     background: url('../../images/border-sel-hov.svg');
 }
 .wrapper_sel_avl {
@@ -96,7 +99,10 @@
 .content__circle_sel {
     background: #d91667;
 }
-.content:hover .content__circle_sel {
+.content__circle_sel_hov {
+    background: #d91667;
+}
+.content:hover .content__circle_sel_hov {
     background: #e62e7a;
 }
 .content__circle_sel_avl {
